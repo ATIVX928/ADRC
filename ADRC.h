@@ -56,13 +56,25 @@ typedef struct ADRC_Parameter
 
 //函数名：ADRC_Init
 //作用：初始化
+//参数fhan_Input：数据存储
 //参数r：微分跟踪器步长，越小跟踪速度越慢，曲线越平缓
 //参数h：时间步长
 //参数z：线性与非线性边界
 //参数p：类似于PID比例环节
 //参数d：类似于PID微分环节
 void ADRC_Init(Fhan_Data* fhan_Input, float r, float h, float z, float p, float d);
+
+//函数名：Fhan_ADRC
+//作用：微分跟踪器
+//参数fhan_Input：数据存储
+//参数expect_ADRC：目标期望
 void Fhan_ADRC(Fhan_Data* fhan_Input, float expect_ADRC);
+
+//函数名：ADRC_Control
+//作用：用户使用函数
+//参数fhan_Input：数据存储
+//参数expect_ADRC：目标期望
+//参数feedback：目标反馈
 void ADRC_Control(Fhan_Data* fhan_Input, float expect_ADRC, float feedback);
 
 extern Fhan_Data ADRC_dx, ADRC_dy, ADRC_dz;

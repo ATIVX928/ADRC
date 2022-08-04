@@ -1,7 +1,7 @@
 #ifndef _ADRC_H_
 #define _ADRC_H_
 
-typedef struct
+typedef struct ADRC_Parameter
 {
 	/*****安排过度过程*******/
 	float x1=0;//跟踪微分期状态量

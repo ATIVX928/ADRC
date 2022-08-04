@@ -1,11 +1,11 @@
 #include "Adrc.h"
 #include "math.h"
 
-const float ADRC_Unit[17] =
+//const float ADRC_Unit[17] =
 
 /*TD跟踪微分器   改进最速TD,h0=N*h      扩张状态观测器ESO           扰动补偿     非线性组合*/
 /*  r     h      N                  beta_01   beta_02    beta_03     b0     beta_0  beta_1     beta_2     N1     C    alpha1  alpha2  zeta  b alpha0*/
-{ 10000 ,0.001f , 3,               300,      4000,      10000,     0.001f,    0.00f,   5.0f,      0.010f,    5,    5,    0.75f,   1.25f,    50,    0,-0.2f };
+//{ 10000 ,0.001f , 3,               300,      4000,      10000,     0.001f,    0.00f,   5.0f,      0.010f,    5,    5,    0.75f,   1.25f,    50,    0,-0.2f };
 
 
 float Constrain_Float(float amt, float low, float high) {
